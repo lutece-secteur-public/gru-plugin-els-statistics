@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
+
+	<!-- REST -->
+    <bean id="statistics-rest.statisticsRest" class="fr.paris.lutece.plugins.statistics.rest.StatisticsRest" />
+
+	<bean id="statistics-rest.encryptionService" class="fr.paris.lutece.plugins.statistics.service.UserStatisticEncryptionService" />
+	
+	<bean id="statistics-rest.objectConverter" class="fr.paris.lutece.plugins.statistics.tools.ObjectConverter" />
+
+	<!-- IDENTITYSTORE BEAN -->
+    <bean id="statistics-rest.identitystore.restTransport" class="fr.paris.lutece.plugins.identitystore.web.rs.service.IdentityTransportRest">
+        <property name="IdentityStoreEndPoint">
+            <value>http://localhost:8084/plugin-identitystore/rest/identitystore</value>
+        </property>
+    </bean>
+    <bean id="statistics-rest.identitystore.service" class="fr.paris.lutece.plugins.identitystore.web.service.IdentityService">
+        <constructor-arg ref="statistics-rest.identitystore.restTransport"/>
+    </bean>
+</beans>

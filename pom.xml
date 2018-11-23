@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<artifactId>lutece-global-pom</artifactId>
+		<groupId>fr.paris.lutece.tools</groupId>
+		<version>4.0.4</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>fr.paris.lutece.plugins</groupId>
+	<artifactId>plugin-els-statistics</artifactId>
+	<packaging>lutece-plugin</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<name>Lutece statistics plugin</name>
+
+	<repositories>
+		<repository>
+			<id>lutece</id>
+			<name>luteceRepository</name>
+			<url>http://dev.lutece.paris.fr/maven_repository</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>luteceSnapshot</id>
+			<name>luteceSnapshot</name>
+			<url>http://dev.lutece.paris.fr/snapshot_repository</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>fr.paris.lutece</groupId>
+			<artifactId>lutece-core</artifactId>
+			<version>[6.0.1,)</version>
+			<type>lutece-core</type>
+		</dependency>
+		<dependency>
+			<groupId>fr.paris.lutece.plugins</groupId>
+			<artifactId>plugin-rest</artifactId>
+			<version>[1.0.0,)</version>
+			<type>lutece-plugin</type>
+		</dependency>
+		<dependency>
+			<groupId>fr.paris.lutece.plugins</groupId>
+			<artifactId>library-grubusiness</artifactId>
+			<version>[1.1.5-SNAPSHOT,)</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>fr.paris.lutece.plugins</groupId>
+			<artifactId>library-identitystore</artifactId>
+			<version>2.0.2</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>rest</artifactId>
+			<version>5.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.7</version>
+		</dependency>
+		<dependency>
+			<groupId>ma.glasnost.orika</groupId>
+			<artifactId>orika-core</artifactId>
+			<version>1.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.7</version>
+		</dependency>
+	</dependencies>
+
+	<properties>
+		<componentName>statistics</componentName>
+		<jiraProjectName>ELSSTATS</jiraProjectName>
+		<jiraComponentId>14765</jiraComponentId>
+	</properties>
+</project>
