@@ -1,15 +1,11 @@
 package fr.paris.lutece.plugins.statistics.tools;
 
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 
-import fr.paris.lutece.plugins.grubusiness.business.customer.Customer;
 import fr.paris.lutece.plugins.grubusiness.business.notification.Notification;
-import fr.paris.lutece.plugins.identitystore.web.rs.dto.AttributeDto;
 import fr.paris.lutece.plugins.identitystore.web.rs.dto.IdentityDto;
-import fr.paris.lutece.plugins.statistics.business.Statistic;
 import fr.paris.lutece.plugins.statistics.model.UserStatistic;
 import fr.paris.lutece.plugins.statistics.model.UserStatistic.MediaType;
 import fr.paris.lutece.portal.service.spring.SpringContextService;
