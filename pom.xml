@@ -97,4 +97,11 @@
 		<jiraProjectName>ELSSTATS</jiraProjectName>
 		<jiraComponentId>14765</jiraComponentId>
 	</properties>
+
+    <scm>
+        <connection>scm:git:https://github.com/lutece-secteur-public/gru-plugin-els-statistics.git</connection>
+        <developerConnection>scm:git:https://github.com/lutece-secteur-public/gru-plugin-els-statistics.git</developerConnection>
+        <url>https://github.com/lutece-secteur-public/gru-plugin-els-statistics.git</url>
+    </scm>
+
 </project>
